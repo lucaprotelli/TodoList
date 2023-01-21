@@ -49,7 +49,7 @@ export default function CreateTask() {
         <Transition.Root
             show={open}
             as={Fragment}
-            afterLeave={() => setQuery("")}
+            // afterLeave={() => setQuery("")}
             appear
         >
             <Dialog as="div" className="relative z-10" onClose={setOpen}>
@@ -65,7 +65,7 @@ export default function CreateTask() {
                     <div className="fixed inset-0 bg-gray-500 bg-opacity-25 transition-opacity" />
                 </Transition.Child>
 
-                <div className="fixed inset-0 z-10 overflow-y-auto p-4 sm:p-6 md:p-20">
+                <div className="fixed inset-10 z-10 overflow-y-auto p-4 sm:p-6 md:p-20">
                     <Transition.Child
                         as={Fragment}
                         enter="ease-out duration-300"
@@ -87,11 +87,11 @@ export default function CreateTask() {
                                         aria-hidden="true"
                                     />
                                     <Combobox.Input
-                                        className="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"
+                                        className="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm focus:outline-none"
                                         placeholder="Search..."
-                                        onChange={(event) =>
-                                            setQuery(event.target.value)
-                                        }
+                                        // onChange={(event) =>
+                                        //     setQuery(event.target.value)
+                                        // }
                                     />
                                 </div>
                                 <Combobox.Options

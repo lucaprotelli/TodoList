@@ -28,7 +28,7 @@ export default function Input() {
                         type="text"
                         name="task"
                         id="task"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none shadow-md "
                         placeholder="Enter task"
                         required
                     />

@@ -18,9 +18,9 @@ function classNames(...classes) {
 
 export default function Switcher() {
     return (
-        <div className="inline-flex rounded-md shadow-sm">
+        <div className="inline-flex rounded-md shadow-md">
             <Menu as="div" className="relative -ml-px block">
-                <Menu.Button className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 shadow-md hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+                <Menu.Button className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 shadow-md hover:bg-gray-50 focus:z-10 focus:outline-none ">
                     <span className="sr-only">Open options</span>
                     <ComputerDesktopIcon
                         className="h-4 w-4"
