@@ -1,5 +1,5 @@
 import { Dialog, Transition } from "@headlessui/react"
-import { Fragment, useState } from "react"
+import React, { Fragment, useState } from "react"
 import Input from "./Input"
 import CreateTask from "./CreateTask"
 
@@ -47,11 +47,8 @@ export default function TodoList() {
             <div className="flow-root">
                 <ul role="list" className="">
                     {people.map((person) => (
-                        <a onClick={openModal}>
-                            <li
-                                key={person.handle}
-                                className="p-3 mt-2 hover:bg-gray-50 hover:border hover:rounded-md hover:border-gray-200"
-                            >
+                        <a key={person.handle} onClick={openModal}>
+                            <li className="p-3 mt-2 hover:bg-gray-50 hover:border hover:rounded-md hover:border-gray-200">
                                 <div className="flex items-center space-x-4">
                                     <div className="flex-shrink-0">
                                         <img
@@ -69,20 +66,20 @@ export default function TodoList() {
                                         </p>
                                     </div>
                                     <div>
-                                        <a
+                                        <button
                                             href="#"
                                             className="inline-flex items-center rounded-full border border-gray-300 bg-white px-2.5 py-0.5 text-sm font-medium leading-5 text-gray-700 shadow-sm hover:bg-gray-50"
                                         >
                                             View
-                                        </a>
+                                        </button>
                                     </div>
                                     <div>
-                                        <a
+                                        <button
                                             href="#"
                                             className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-2.5 py-0.5 text-sm font-medium leading-5 text-red-600 shadow-sm hover:bg-red-100"
                                         >
                                             Delete
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </li>
@@ -144,12 +141,12 @@ export default function TodoList() {
                 </Dialog>
             </Transition>
             <div className="mt-6">
-                <a
+                <button
                     href="#"
                     className="flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50"
                 >
                     View all
-                </a>
+                </button>
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 export default function Input() {
-    const [open, setOpen] = useState(false)
+    let [open, setOpen] = useState(false)
 
     // Toggle the menu when ⌘K is pressed
     React.useEffect(() => {
@@ -19,7 +19,7 @@ export default function Input() {
             <div>
                 <label
                     htmlFor="task"
-                    class="block mb-2 text-md font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                 >
                     Task:
                 </label>
@@ -28,7 +28,7 @@ export default function Input() {
                         type="text"
                         name="task"
                         id="task"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none shadow-md "
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none shadow-md "
                         placeholder="Enter task"
                         required
                     />
