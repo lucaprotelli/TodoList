@@ -46,45 +46,50 @@ export default function TodoList() {
             <Input />
             <CreateTask />
             <div className="flow-root">
-                <ul role="list" className="">
+                <ul role="list">
                     {people.map((person) => (
-                        <a key={person.handle} onClick={openModal}>
-                            <li className="group/task p-3 mt-2 hover:bg-gray-100 border border-white hover:border-slate-300 hover:rounded-md">
-                                <div className="flex items-center space-x-4">
-                                    <div className="flex-shrink-0">
-                                        <img
-                                            className="h-8 w-8 rounded-full"
-                                            src={person.imageUrl}
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div className="min-w-0 flex-1">
-                                        <p className="truncate text-sm font-medium text-gray-900">
-                                            {person.name}
-                                        </p>
-                                        <p className="truncate text-sm text-gray-500">
-                                            {"@" + person.handle}
-                                        </p>
-                                    </div>
-                                    <div className="xl:hidden xl:group-hover/task:block">
-                                        <button
-                                            href="#"
-                                            className="inline-flex items-center rounded-full hover:bg-indigo-600/20 px-3 py-1 text-sm font-semibold leading-5 text-indigo-600 shadow-lg ring-1 ring-inset ring-indigo-600/20"
-                                        >
-                                            Done
-                                        </button>
-                                    </div>
-                                    <div className="xl:hidden xl:group-hover/task:block">
-                                        <button
-                                            href="#"
-                                            className="inline-flex items-center rounded-lg shadow-xl px-1 py-1 text-sm font-semibold leading-5 text-gray-600 ring-1 ring-inset ring-slate-600/20 hover:bg-slate-600/10"
-                                        >
-                                            <XMarkIcon className="h-5 w-5" />
-                                        </button>
-                                    </div>
+                        <li
+                            key={person.handle}
+                            className="group/task p-3 mt-2 hover:bg-gray-100 border border-white hover:border-slate-300 hover:rounded-md"
+                        >
+                            <div
+                                className="flex items-center space-x-4 cursor-pointer"
+                                onClick={openModal}
+                            >
+                                <div className="flex-shrink-0">
+                                    <img
+                                        className="h-8 w-8 rounded-full"
+                                        src={person.imageUrl}
+                                        alt=""
+                                    />
                                 </div>
-                            </li>
-                        </a>
+                                <div className="min-w-0 flex-1">
+                                    <p className="truncate text-sm font-medium text-gray-900">
+                                        {person.name}
+                                    </p>
+                                    <p className="truncate text-sm text-gray-500">
+                                        {"@" + person.handle}
+                                    </p>
+                                </div>
+                                <div className="xl:hidden xl:group-hover/task:block">
+                                    <button
+                                        href="#"
+                                        className="inline-flex items-center rounded-full hover:bg-indigo-600/20 px-3 py-1 text-sm font-semibold leading-5 text-indigo-600 shadow-lg ring-1 ring-inset ring-indigo-600/20"
+                                    >
+                                        Done
+                                    </button>
+                                </div>
+                                <div className="xl:hidden xl:group-hover/task:block">
+                                    <button
+                                        name="delete"
+                                        href="#"
+                                        className="inline-flex items-center rounded-md shadow-xl px-1 py-1 text-sm font-semibold leading-5 text-gray-600 ring-1 ring-inset ring-slate-600/20 hover:bg-slate-600/10"
+                                    >
+                                        <XMarkIcon className="h-5 w-5" />
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
                     ))}
                 </ul>
             </div>
