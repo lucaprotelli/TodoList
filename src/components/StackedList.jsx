@@ -2,6 +2,7 @@ import { Dialog, Transition } from "@headlessui/react"
 import React, { Fragment, useState } from "react"
 import Input from "./Input"
 import CreateTask from "./CreateTask"
+import { XMarkIcon } from "@heroicons/react/24/outline"
 
 const people = [
     {
@@ -48,7 +49,7 @@ export default function TodoList() {
                 <ul role="list" className="">
                     {people.map((person) => (
                         <a key={person.handle} onClick={openModal}>
-                            <li className="p-3 mt-2 hover:bg-gray-50 border border-white hover:rounded-md hover:border-gray-200">
+                            <li className="group/task p-3 mt-2 hover:bg-gray-100 border border-white hover:border-slate-300 hover:rounded-md">
                                 <div className="flex items-center space-x-4">
                                     <div className="flex-shrink-0">
                                         <img
@@ -65,21 +66,20 @@ export default function TodoList() {
                                             {"@" + person.handle}
                                         </p>
                                     </div>
-                                    <div>
+                                    <div className="xl:hidden xl:group-hover/task:block">
                                         <button
                                             href="#"
-                                            className="inline-flex items-center rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-5 text-indigo-600 shadow-sm ring-1 ring-inset ring-indigo-600/10 hover:bg-indigo-600/20"
+                                            className="inline-flex items-center rounded-full hover:bg-indigo-600/20 px-3 py-1 text-sm font-semibold leading-5 text-indigo-600 shadow-lg ring-1 ring-inset ring-indigo-600/20"
                                         >
                                             Done
                                         </button>
                                     </div>
-                                    <div>
+                                    <div className="xl:hidden xl:group-hover/task:block">
                                         <button
                                             href="#"
-                                            onClick={console.log("delete")}
-                                            className="inline-flex items-center rounded-full bg-red-600/10 px-3 py-1 text-sm font-semibold leading-5 text-red-600 shadow-sm ring-1 ring-inset ring-red-600/10 hover:bg-red-100"
+                                            className="inline-flex items-center rounded-lg shadow-xl px-1 py-1 text-sm font-semibold leading-5 text-gray-600 ring-1 ring-inset ring-slate-600/20 hover:bg-slate-600/10"
                                         >
-                                            Delete
+                                            <XMarkIcon className="h-5 w-5" />
                                         </button>
                                     </div>
                                 </div>
@@ -144,7 +144,7 @@ export default function TodoList() {
             <div className="mt-6">
                 <button
                     href="#"
-                    className="flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-md hover:bg-gray-50"
+                    className="flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-md hover:bg-gray-50"
                 >
                     View all
                 </button>

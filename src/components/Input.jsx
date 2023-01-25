@@ -22,7 +22,7 @@ export default function Input() {
                         type="text"
                         name="task"
                         id="task"
-                        className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none shadow-xl hover:bg-gray-50 focus:bg-gray-50 focus:border-gray-400 "
+                        className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-xl hover:bg-gray-50 focus:bg-gray-50 focus:outline-none focus:ring focus:ring-indigo-100 "
                         placeholder="Enter task"
                         required
                     />
