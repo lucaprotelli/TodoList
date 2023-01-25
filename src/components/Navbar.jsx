@@ -42,7 +42,7 @@ export default function Navbar() {
                     </div>
 
                     <div className="flex items-center divide-x">
-                        <div className="mr-3 md:mr-5">
+                        <div className="flex items-center mr-3 md:mr-5">
                             <button
                                 href="#"
                                 className="inline-flex items-center rounded-full bg-indigo-600/10 px-2 py-1 text-xs md:text-sm font-semibold leading-5 text-indigo-600 shadow-sm ring-1 ring-inset ring-indigo-600/20 hover:bg-indigo-600/20"

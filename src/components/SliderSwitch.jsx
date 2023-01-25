@@ -14,7 +14,7 @@ export default function SliderSwitch() {
             onChange={setEnabled}
             className={classNames(
                 enabled
-                    ? "bg-neutral-700 border-neutral-400 hover:border-white"
+                    ? "bg-neutral-800 border-neutral-400 hover:border-white"
                     : "bg-gray-50 border-gray-300 hover:border-gray-600",
                 "mx-3 md:mx-5 inline-flex items-center h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border transition-colors duration-200 ease-in-out focus:outline-none"
             )}
