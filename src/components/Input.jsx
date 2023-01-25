@@ -17,18 +17,12 @@ export default function Input() {
     return (
         <>
             <div>
-                <label
-                    htmlFor="task"
-                    className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
-                >
-                    Task:
-                </label>
-                <div className="relative mt-1 flex items-center">
+                <div className="relative mt-1 flex items-center mb-5">
                     <input
                         type="text"
                         name="task"
                         id="task"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none shadow-md "
+                        className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none shadow-xl hover:bg-gray-50 focus:bg-gray-50 focus:border-gray-400 "
                         placeholder="Enter task"
                         required
                     />

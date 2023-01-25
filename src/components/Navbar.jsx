@@ -12,8 +12,8 @@ export default function Navbar() {
                         className="relative flex items-center justify-around sm:h-10"
                         aria-label="Global"
                     >
-                        <div className="flex items-center mr-2 md:mr-0">
-                            <div className="flex w-full items-center md:w-auto">
+                        <div className="flex items-center gap-3">
+                            <div className="flex items-center">
                                 <Popover.Button>
                                     <span className="sr-only">
                                         Your Company
@@ -36,12 +36,11 @@ export default function Navbar() {
                                     </Popover.Button>
                                 </div> */}
                             </div>
-                        </div>
-
-                        <div className="flex flex-1 md:flex-initial items-center">
-                            <h1 className="text-2xl font-bold tracking-tight sm:text-center sm:text-4xl">
-                                Todo List
-                            </h1>
+                            <div className="flex flex-1 md:flex-initial items-center">
+                                <h1 className="text-2xl font-bold tracking-tight sm:text-center sm:text-3xl">
+                                    Todo List
+                                </h1>
+                            </div>
                         </div>
 
                         <div className="flex items-center gap-3 divide-x">
@@ -70,7 +69,7 @@ export default function Navbar() {
                             <div className="inline-flex rounded-md shadow">
                                 <a
                                     href="#"
-                                    className="inline-flex items-center rounded-md border border-gray-300 bg-white px-2 py-2 md:px-4 md:py-2  text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50"
+                                    className="inline-flex items-center rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
                                     Log in
                                 </a>
@@ -116,7 +115,7 @@ export default function Navbar() {
                             <div className="space-y-1 px-2 pt-2 pb-3"></div>
                             <a
                                 href="#"
-                                className="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100 hover:text-indigo-700"
+                                className="block w-full bg-gray-50 px-5 py-3 text-center shadow-xl font-medium text-indigo-600 hover:bg-gray-100 hover:text-indigo-700"
                             >
                                 Log in
                             </a>

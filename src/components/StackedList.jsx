@@ -41,14 +41,14 @@ export default function TodoList() {
         setIsOpen(true)
     }
     return (
-        <div>
+        <div className="lg:w-1/3">
             <Input />
             <CreateTask />
             <div className="flow-root">
                 <ul role="list" className="">
                     {people.map((person) => (
                         <a key={person.handle} onClick={openModal}>
-                            <li className="p-3 mt-2 hover:bg-gray-50 hover:border hover:rounded-md hover:border-gray-200">
+                            <li className="p-3 mt-2 hover:bg-gray-50 border border-white hover:rounded-md hover:border-gray-200">
                                 <div className="flex items-center space-x-4">
                                     <div className="flex-shrink-0">
                                         <img
@@ -68,15 +68,16 @@ export default function TodoList() {
                                     <div>
                                         <button
                                             href="#"
-                                            className="inline-flex items-center rounded-full border border-gray-300 bg-white px-2.5 py-0.5 text-sm font-medium leading-5 text-gray-700 shadow-sm hover:bg-gray-50"
+                                            className="inline-flex items-center rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-5 text-indigo-600 shadow-sm ring-1 ring-inset ring-indigo-600/10 hover:bg-indigo-600/20"
                                         >
-                                            View
+                                            Done
                                         </button>
                                     </div>
                                     <div>
                                         <button
                                             href="#"
-                                            className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-2.5 py-0.5 text-sm font-medium leading-5 text-red-600 shadow-sm hover:bg-red-100"
+                                            onClick={console.log("delete")}
+                                            className="inline-flex items-center rounded-full bg-red-600/10 px-3 py-1 text-sm font-semibold leading-5 text-red-600 shadow-sm ring-1 ring-inset ring-red-600/10 hover:bg-red-100"
                                         >
                                             Delete
                                         </button>
@@ -143,7 +144,7 @@ export default function TodoList() {
             <div className="mt-6">
                 <button
                     href="#"
-                    className="flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50"
+                    className="flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-md hover:bg-gray-50"
                 >
                     View all
                 </button>
