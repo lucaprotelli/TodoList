@@ -6,7 +6,8 @@ import {
     PlusIcon,
     TrashIcon,
     HashtagIcon,
-    TagIcon,
+    BookmarkIcon,
+    BookmarkSlashIcon,
 } from "@heroicons/react/24/outline"
 
 const quickActions = [
@@ -23,7 +24,13 @@ const quickActions = [
         url: "#",
     },
     { name: "Add hashtag...", icon: HashtagIcon, shortcut: "H", url: "#" },
-    { name: "Add label...", icon: TagIcon, shortcut: "L", url: "#" },
+    { name: "Add to bookmark...", icon: BookmarkIcon, shortcut: "L", url: "#" },
+    {
+        name: "Remove to bookmark...",
+        icon: BookmarkSlashIcon,
+        shortcut: "G",
+        url: "#",
+    },
 ]
 
 function classNames(...classes) {

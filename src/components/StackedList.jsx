@@ -50,7 +50,7 @@ export default function TodoList() {
                     {people.map((person) => (
                         <li
                             key={person.handle}
-                            className="group/task p-3 mt-2 hover:bg-gray-100 border border-white hover:border-slate-300 hover:rounded-md"
+                            className="group/item p-3 mt-2 bg-gray-50 hover:bg-gray-600/10 border border-slate-300 rounded-md"
                         >
                             <div
                                 className="flex items-center space-x-4 cursor-pointer"
@@ -71,19 +71,19 @@ export default function TodoList() {
                                         {"@" + person.handle}
                                     </p>
                                 </div>
-                                <div className="xl:hidden xl:group-hover/task:block">
+                                <div className="group/edit inline-flex lg:hidden group-hover/item:inline-flex">
                                     <button
                                         href="#"
-                                        className="inline-flex items-center rounded-full hover:bg-indigo-600/20 px-3 py-1 text-sm font-semibold leading-5 text-indigo-600 shadow-lg ring-1 ring-inset ring-indigo-600/20"
+                                        className="group-hover/edit:inline-flex items-center rounded-full bg-indigo-600/10 hover:bg-indigo-600/20 px-3 py-1 text-sm font-semibold leading-5 text-indigo-600 shadow-lg ring-1 ring-inset ring-indigo-600/20"
                                     >
                                         Done
                                     </button>
                                 </div>
-                                <div className="xl:hidden xl:group-hover/task:block">
+                                <div className="group/edit inline-flex lg:hidden group-hover/item:inline-flex">
                                     <button
                                         name="delete"
                                         href="#"
-                                        className="inline-flex items-center rounded-md shadow-xl px-1 py-1 text-sm font-semibold leading-5 text-gray-600 ring-1 ring-inset ring-slate-600/20 hover:bg-slate-600/10"
+                                        className="group-hover/edit:inline-flex items-center text-sm font-semibold leading-5 text-gray-600 hover:text-gray-800"
                                     >
                                         <XMarkIcon className="h-5 w-5" />
                                     </button>
