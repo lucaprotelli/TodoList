@@ -50,7 +50,7 @@ export default function TodoList() {
                     {people.map((person) => (
                         <li
                             key={person.handle}
-                            className="group/item p-3 mt-2 bg-gray-50 hover:bg-gray-600/10 border border-slate-300 rounded-md"
+                            className="group/item p-3 mt-2 border rounded-lg bg-gradient-to-t from-gray-50 to-white hover:from-gray-100 hover:to-white border-gray-300 shadow-inner drop-shadow-md"
                         >
                             <div
                                 className="flex items-center space-x-4 cursor-pointer"
@@ -149,7 +149,7 @@ export default function TodoList() {
             <div className="mt-6">
                 <button
                     href="#"
-                    className="flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-md hover:bg-gray-50"
+                    className="flex w-full items-center justify-center border rounded-lg border-gray-300 bg-gradient-to-t from-slate-100 to-white shadow-inner drop-shadow-md px-4 py-2 text-sm font-medium text-gray-700"
                 >
                     View all
                 </button>
